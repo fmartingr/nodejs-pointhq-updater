@@ -57,7 +57,7 @@ ip_request = http.get CONFIG.public_ip_url, (response) ->
     request.end()
 .on 'error', (error) ->
   # If cant get the public ip we've nothing to do here
-  console.log 'Cant get public IP!'
+  console.log 'Cant get public IP from ${CONFIG.public_ip_url}!'
   process.exit()
 
 # Request handler to the PointHQ API
